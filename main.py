@@ -14,19 +14,18 @@ DEFAULT_CLASSES = [
 ]
 
 
-def generate_color():
-    return (
-        random.randint(50, 255),
-        random.randint(50, 255),
-        random.randint(50, 255),
-        random.randint(50, 255),
-        random.randint(50, 255),
-        random.randint(50, 255),
-        random.randint(50, 255),
-        random.randint(50, 255),
-        random.randint(50, 255),
-        random.randint(50, 255)
-    )
+COLORS = {
+    "person": (0, 0, 255),   # rojo
+    "bicycle": (0, 255, 0),  # verde
+    "car": (255, 0, 0),      # azul
+    "motorcycle": (0, 255, 255),
+    "bus": (0, 165, 255),
+    "truck": (128, 0, 128),
+    "traffic light": (255, 255, 0),
+    "stop sign": (255, 0, 255),
+    "dog": (19, 69, 139),
+    "cat": (128, 128, 128)
+}
 
 
 def get_class_colors(classes):
@@ -83,7 +82,8 @@ def main():
     results = model(image, verbose=False)
 
     annotated = image.copy()
-    colors = get_class_colors(selected_classes)
+
+    colors = COLORS
 
     saved_count = 0
     class_counter = {cls: 0 for cls in selected_classes}
