@@ -28,10 +28,6 @@ COLORS = {
 }
 
 
-def get_class_colors(classes):
-    return {cls: generate_color() for cls in classes}
-
-
 def parse_args():
     parser = argparse.ArgumentParser(
         description="YOLOv8 detección + recortes + imagen anotada"
