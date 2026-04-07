@@ -19,6 +19,13 @@ def generate_color():
         random.randint(50, 255),
         random.randint(50, 255),
         random.randint(50, 255),
+        random.randint(50, 255),
+        random.randint(50, 255),
+        random.randint(50, 255),
+        random.randint(50, 255),
+        random.randint(50, 255),
+        random.randint(50, 255),
+        random.randint(50, 255)
     )
 
 
@@ -31,7 +38,7 @@ def parse_args():
         description="YOLOv8 detección + recortes + imagen anotada"
     )
     parser.add_argument("--model", default="yolov8n.pt")
-    parser.add_argument("--input", default="prueba.jpeg")
+    parser.add_argument("--input", default="demostracion.jpeg")
     parser.add_argument("--output-dir", default="recortes")
     parser.add_argument("--annotated", default="resultado.jpg")
     parser.add_argument("--classes", nargs="+", default=DEFAULT_CLASSES)
